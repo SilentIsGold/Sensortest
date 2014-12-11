@@ -3,20 +3,20 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    >
 
-    <Spinner
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Phone1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Phone2"
-        android:layout_below="@+id/Phone1"
+        android:id="@+id/TypeFileText"
+        android:text="UserTypeText"
+        android:textSize="16dp"
+        android:layout_row="12"
+        android:layout_column="0"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:layout_above="@+id/Start"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -26,15 +26,6 @@
         android:text="Start"
         android:id="@+id/Start"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="30dp" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Motion"
-        android:layout_below="@+id/Phone2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -47,24 +38,61 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/holayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Spinner
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Phone1"
+            android:layout_alignParentLeft="true"
+
+            android:layout_alignRight="@+id/Phone2"
+            android:layout_alignEnd="@+id/Phone2"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <Spinner
+            android:layout_width="101dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Phone2"
+            android:layout_above="@+id/Motion"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Motion"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="SensorList"
         android:id="@+id/SensorList"
-        android:layout_below="@+id/Motion"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TypeFileText"
-        android:text="UserTypeText"
-        android:layout_above="@+id/Start"
+        android:textSize="14dp"
+        android:layout_row="10"
+        android:layout_column="0"
+        android:layout_gravity="bottom"
+        android:layout_below="@+id/holayout"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="94dp" />
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
