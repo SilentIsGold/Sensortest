@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
 
     private String[] FileList = new String[3];
     private String[] PhoneList = {"SonyTx","HTCSensation","SamsungGTS681","SonyXS","ASUSPadefone","SonyT3"};
-    private String[] MotionList = {"上下","左右","X","手臂自然揮動"};
+    private String[] MotionList = {"垂直上下","水平左右","X","自然上下揮動"};
 
 
     @Override
